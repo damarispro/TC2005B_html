@@ -18,18 +18,32 @@
 <h1>Mi primera página web</h1>
 
 <form>
-    <div class="mb-3">
-        <label>Username:</label>
-        <input type="text" class="form-control">
-    </div>
-
-    <div class="mb-3">
-        <label>Password:</label>
-        <input type="password" class="form-control">
-    </div>
-
-    <button class="btn btn-primary w-100">Login</button>
+    <input type="text" id="username" class="form-control">
+    <input type="password" id="password" class="form-control">
+    <button type="button" onclick="login()" class="btn btn-primary w-100">Login</button>
 </form>
+
+<div class="text-center mt-4">
+    <label><input type="radio" name="opcion" onclick="mostrarContenido()">Opcion 1</label>
+    <label><input type="radio" name="opcion" onclick="mostrarContenido()">Opcion 2</label>
+    <div id="contenido" style="display:none;">
+        Contenido desbloqueado
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <input type="checkbox" id="check1" onclick="activarBoton()"> Acepto terminos
+    <input type="checkbox" id="check2" onclick="activarBoton()"> Soy mayor
+    <br><br>
+    <button id="btnCheck" disabled>Continuar</button>
+</div>
+
+<div class="text-center mt-4">
+    <select id="pais"></select>
+    <select id="region"></select>
+</div>
+
+
 
 <section class="text-center p-3">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aliquid natus, exercitationem, ducimus ut eligendi recusandae delectus quibusdam magni molestias amet ullam eum blanditiis accusantium explicabo odio! Dolor, sequi corrupti.
@@ -37,3 +51,4 @@
 
 </body>
 </html>
+<script src="script.js"></script>
